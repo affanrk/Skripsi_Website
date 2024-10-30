@@ -23,4 +23,4 @@ Route::get('/history', [ModelTestController::class, 'history'])->name('history')
 Route::get('/about/model', [ModelTestController::class, 'about_model'])->name('about_model');
 Route::get('/history/admin', [ModelTestController::class, 'history_admin'])->name('history_admin');
 Route::get('/history/admin/delete/{id}', [ModelTestController::class, 'history_delete'])->name('history_delete');
-Route::post('/classification/predict', [ModelTestController::class, 'makePrediction'])->name('make-prediction');
+Route::post('/classification/predict', [ModelTestController::class, 'predictImage'])->name('predict_image');

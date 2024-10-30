@@ -52,33 +52,33 @@ class ModelTestController extends Controller
         }
     }
 
-    public function makePrediction(Request $request)
+    public function predictImage(Request $request)
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,jfif|max:2048',
         ]);
-
-        $predictions = $request->text1;
-        $class = $request->text2;
-        $prob_percentage = $request->text3;
+        
+        $class = $request->text1;
+        $prediction = $request->text2;
+        $probabilityPercentage = $request->text3;
 
         $imagePath = $request->file('image')->store('public/images');
         $relativeImagePath = str_replace('public/', '', $imagePath);
 
         $image = new Image();
         $image->path = $relativeImagePath;
-        $image->prediction = $predictions;
-        if ($predictions !== 'none') {
-            $image->probability = $prob_percentage;
-        } else if ($predictions === 'none') {
+        $image->prediction = $prediction;
+        if ($prediction !== 'none') {
+            $image->probability = $probabilityPercentage;
+        } else if ($prediction === 'none') {
             $image->probability = 'none';
         }
         $image->save();
 
         return view('predict', [
-            'predictions' => $predictions,
+            'prediction' => $prediction,
             'class' => $class,
-            'prob_percentage' => $prob_percentage,
+            'probabilityPercentage' => $probabilityPercentage,
             'imagePath' => $imagePath
         ]);
     }

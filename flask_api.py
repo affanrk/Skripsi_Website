@@ -63,9 +63,9 @@ def predict():
 
         # Build the response
         response = {
-            'Prediction': predicted_class_label.capitalize(),
             'Class': predicted_class_label.capitalize(),
-            'ProbabilityPercentage': predicted_class_probability_percentage
+            'Prediction': predicted_class_label.capitalize(),
+            'Probability': predicted_class_probability_percentage
         }
 
         print(response)

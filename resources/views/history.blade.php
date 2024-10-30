@@ -28,11 +28,11 @@
                 <tbody>
                     @foreach ($images as $data)
                     <tr class="text-center align-middle">
-                        <td class="p-3">{{ $data->id }}</td>
+                        <td class="p-3">{{ $loop->iteration }}</td> <!-- Menggunakan $loop->iteration untuk nomor urut -->
                         <td class="p-3">
-                            <img src="{{ asset('/storage/images/' . basename( $data->path )) }}" alt="Uploaded Image"
+                            <img src="{{ asset('/storage/images/' . basename($data->path)) }}" alt="Uploaded Image"
                                 style="height: 100px; width: 100px; border-radius: 8px; object-fit: cover;"
-                                class="border border-secondary">
+                                class="border border-secondary mx-auto d-block">
                         </td>
                         <td class="p-3">{{ $data->prediction }}</td>
                         <td class="p-3">{{ $data->probability }}</td>

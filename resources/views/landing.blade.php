@@ -13,7 +13,7 @@
             </p>
 
             <!-- Form Section -->
-            <form method="POST" id="form" action="{{ route('make-prediction') }}" enctype="multipart/form-data" class="mx-auto" style="max-width: 400px;">
+            <form method="POST" id="form" action="{{ route('predict_image') }}" enctype="multipart/form-data" class="mx-auto" style="max-width: 400px;">
                 @csrf
                 <!-- File Upload Input -->
                 <div class="mb-4">
@@ -58,7 +58,7 @@
                     var form = document.getElementById('form');
                     document.getElementById('text1').value = data.Class;
                     document.getElementById('text2').value = data.Prediction;
-                    document.getElementById('text3').value = data.ProbabilityPercentage;
+                    document.getElementById('text3').value = data.Probability;
                     form.submit();
                 })
                 .catch(error => {

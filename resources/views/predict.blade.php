@@ -20,19 +20,19 @@
         @endif
 
         <!-- Prediction Section -->
-        @if(isset($predictions))
+        @if(isset($prediction))
         <div class="d-flex justify-content-center align-items-center mb-4">
-            @if($predictions === 'none')
+            @if($prediction === 'none')
             <div class="text-center">
                 <p class="fw-bold text-lg md:text-xl" style="font-family: 'Montserrat', sans-serif; color: #555;">Model is not confident in any class.</p>
             </div>
             @else
             <div class="text-center">
                 <p class="fw-bold text-lg md:text-xl" style="color: #333; font-family: 'Montserrat', sans-serif;">Prediction:
-                    <span class="fw-normal">{{ $predictions }}</span>
+                    <span class="fw-normal">{{ $prediction }}</span>
                 </p>
                 <p class="fw-bold text-lg md:text-xl" style="color: #333; font-family: 'Montserrat', sans-serif;">Probability:
-                    <span class="fw-normal">{{ $prob_percentage }}</span>
+                    <span class="fw-normal">{{ $probabilityPercentage }}</span>
                 </p>
             </div>
             @endif
