@@ -76,7 +76,7 @@
                     <div class="container w-75">
                         <div class="row shadow-lg">
                             <div class="col p-0">
-                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('/squat.jpg') }}" alt="Squat Image">
+                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('img/squat.jpg') }}" alt="Squat Image">
                             </div>
                             <div class="col text-left bg-dark text-white p-5 d-flex align-items-center" style="border-radius: 0px 20px 20px 0px">
                                 <div>
