@@ -98,28 +98,28 @@
                             <tbody>
                                 <tr>
                                     <td class="px-4 py-2 border">Benchpress</td>
-                                    <td class="px-4 py-2 border">77.78%</td>
-                                    <td class="px-4 py-2 border">70.00%</td>
-                                    <td class="px-4 py-2 border">73.68%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 border">Squat</td>
-                                    <td class="px-4 py-2 border">70.00%</td>
-                                    <td class="px-4 py-2 border">70.00%</td>
-                                    <td class="px-4 py-2 border">70.00%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
+                                    <td class="px-4 py-2 border">90.00%</td>
                                 </tr>
                                 <tr>
                                     <td class="px-4 py-2 border">Deadlift</td>
-                                    <td class="px-4 py-2 border">81.82%</td>
-                                    <td class="px-4 py-2 border">90.00%</td>
-                                    <td class="px-4 py-2 border">85.71%</td>
+                                    <td class="px-4 py-2 border">80.00%</td>
+                                    <td class="px-4 py-2 border">80.00%</td>
+                                    <td class="px-4 py-2 border">80.00%</td>
                                 </tr>
                                 <!-- Add other rows as needed -->
                                 <tr>
                                     <td class="px-4 py-2 border">Average</td>
-                                    <td class="px-4 py-2 border">76.53%</td>
-                                    <td class="px-4 py-2 border">76.67%</td>
-                                    <td class="px-4 py-2 border">76.47%</td>
+                                    <td class="px-4 py-2 border">86.67%</td>
+                                    <td class="px-4 py-2 border">86.67%</td>
+                                    <td class="px-4 py-2 border">86.67%</td>
                                 </tr>
                             </tbody>
                         </table>
