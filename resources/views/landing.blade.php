@@ -49,7 +49,7 @@
             var formData = new FormData();
             formData.append('image', imageFile);
 
-            fetch('https://127.0.0.1:5000/predict', {
+            fetch('https://api-gymformx/predict', {
                     method: 'POST',
                     body: formData
                 })
