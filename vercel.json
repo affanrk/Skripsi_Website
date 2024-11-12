@@ -12,9 +12,11 @@
     "buildCommand": "vite build",
     "outputDirectory": "public",
     "env": {
+        "LD_LIBRARY_PATH": "/usr/local/lib:/usr/lib:/lib",
+
         "APP_NAME": "GymFormX",
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://gymformx.vercel.app",
         "APP_KEY": "base64:+3g44h0WjxjnicKZTVlYyM2DVnelDeSVkCNFUVCtNww=",
 
