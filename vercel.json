@@ -29,6 +29,7 @@
         "DB_HOST": "8vlm7.h.filess.io",
         "DB_PORT": "3307",
         "DB_DATABASE": "skripsi_mattermud",
-        "DB_USERNAME": "skripsi_mattermud"
+        "DB_USERNAME": "skripsi_mattermud",
+        "DB_PASSWORD": "dbskripsi123"
     }
 }
