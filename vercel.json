@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.5.2" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
@@ -12,6 +12,7 @@
     "buildCommand": "vite build",
     "outputDirectory": "public",
     "env": {
+        "APP_NAME": "GymFormX",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://gymformx.vercel.app",
