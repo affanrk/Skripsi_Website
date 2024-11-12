@@ -5,8 +5,14 @@
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
-        { "src": "^/public/(.*)", "dest": "/public/$1" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        { 
+            "src": "/(.*)", 
+            "dest": "/public/" 
+        },
+        { 
+            "src": "/(.*)",
+            "dest": "/api/index.php" 
+        }
     ],
     "public": true,
     "buildCommand": "vite build",
@@ -14,8 +20,8 @@
     "env": {
         "APP_NAME": "GymFormX",
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
-        "APP_URL": "https://gymformx.vercel.app",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://gymformx.vercel.app/",
         "APP_KEY": "base64:+3g44h0WjxjnicKZTVlYyM2DVnelDeSVkCNFUVCtNww=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
