@@ -51,19 +51,19 @@
             <div class="flex justify-center flex-wrap gap-6">
                 <!-- Sample Cards -->
                 <div class="card bg-white shadow-md rounded-lg dark:bg-gray-700" style="width: 250px;">
-                    <img src="{{ asset('/benchpress-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Benchpress Sample">
+                    <img src="{{ asset('img/benchpress-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Benchpress Sample">
                     <div class="card-body p-4">
                         <h5 class="card-title text-gray-900 dark:text-gray-600 font-extrabold">Benchpress</h5>
                     </div>
                 </div>
                 <div class="card bg-white shadow-md rounded-lg dark:bg-gray-700" style="width: 250px;">
-                    <img src="{{ asset('/squat-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Squat Sample">
+                    <img src="{{ asset('img/squat-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Squat Sample">
                     <div class="card-body p-4">
                         <h5 class="card-title text-gray-900 dark:text-gray-600 font-extrabold">Squat</h5>
                     </div>
                 </div>
                 <div class="card bg-white shadow-md rounded-lg dark:bg-gray-700" style="width: 250px;">
-                    <img src="{{ asset('/deadlift-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Deadlift Sample">
+                    <img src="{{ asset('img/deadlift-sample.jpg') }}" class="rounded-t-lg object-cover h-64" alt="Deadlift Sample">
                     <div class="card-body p-4">
                         <h5 class="card-title text-gray-900 dark:text-gray-600 font-extrabold">Deadlift</h5>
                     </div>
@@ -79,7 +79,7 @@
                 <!-- Confusion Matrix -->
                 <div class="card bg-white shadow-md rounded-lg dark:bg-gray-700 p-6">
                     <h5 class="font-extrabold text-gray-900 dark:text-gray-600 mb-4">Confusion Matrix</h5>
-                    <img src="{{ asset('/confusion-matrix.png') }}" alt="Confusion Matrix" class="rounded-lg">
+                    <img src="{{ asset('img/confusion-matrix.png') }}" alt="Confusion Matrix" class="rounded-lg">
                 </div>
 
                 <!-- Classification Report -->

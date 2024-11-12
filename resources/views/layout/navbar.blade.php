@@ -5,7 +5,7 @@
             <!-- Logo and Brand Name Section -->
             <div class="col-12 col-md-4 d-flex justify-content-md-start justify-content-center p-0">
                 <a class="navbar-brand d-flex align-items-center" href="/" style="font-family: 'Poppins', sans-serif;">
-                    <img src="{{ asset('/logo.png') }}" width="80" height="80" class="d-inline-block" alt="GymFormX Logo">
+                    <img src="{{ asset('img/logo.png') }}" width="80" height="80" class="d-inline-block" alt="GymFormX Logo">
                     <h1 class="ms-3 fw-bold" style="font-size: 1.8rem; color: #333;">GymFormX</h1>
                 </a>
             </div>

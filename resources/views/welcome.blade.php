@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- About Section -->
-<section id="about" class="d-flex justify-content-center align-items-center min-vh-100" style="background-image: url('{{ asset('/background-2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<section id="about" class="d-flex justify-content-center align-items-center min-vh-100" style="background-image: url('{{ asset('img/background-2.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="max-w-7xl m-auto p-6 lg:p-8 text-white min-vh-100 min-vw-100" style="background-color: rgba(0, 0, 0, 0.4);">
         <div class="grid gap-6 lg:gap-8 mt-40 text-center">
             <h1 class="fw-bold text-4xl md:text-5xl lg:text-6x mb-4" style="color:white; font-family: 'Montserrat', sans-serif;">About GymFormX</h1>
@@ -38,7 +38,7 @@
                     <div class="container w-75">
                         <div class="row shadow-lg">
                             <div class="col p-0">
-                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('/deadlift.jpg') }}" alt="Deadlift Image">
+                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('img/deadlift.jpg') }}" alt="Deadlift Image">
                             </div>
                             <div class="col text-left bg-dark text-white p-5 d-flex align-items-center" style="border-radius: 0px 20px 20px 0px">
                                 <div>
@@ -57,7 +57,7 @@
                     <div class="container w-75">
                         <div class="row shadow-lg">
                             <div class="col p-0">
-                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('/benchpress.jpg') }}" alt="Bench Press Image">
+                                <img style="border-radius: 20px 0px 0px 20px; object-fit: cover; width: 100%; height: 100%;" src="{{ asset('img/benchpress.jpg') }}" alt="Bench Press Image">
                             </div>
                             <div class="col text-left bg-dark text-white p-5 d-flex align-items-center" style="border-radius: 0px 20px 20px 0px">
                                 <div>
