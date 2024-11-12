@@ -9,11 +9,9 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
-    "buildCommand": "vite build",
+    "buildCommand": "composer install --ignore-platform-reqs && vite build",
     "outputDirectory": "public",
     "env": {
-        "LD_LIBRARY_PATH": "/usr/local/lib:/usr/lib:/lib",
-
         "APP_NAME": "GymFormX",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
