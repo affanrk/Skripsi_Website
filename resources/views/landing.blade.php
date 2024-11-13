@@ -49,7 +49,7 @@
             var formData = new FormData();
             formData.append('image', imageFile);
 
-            fetch('https://api-gymformx.vercel.app/predict', {
+            fetch('https://http://127.0.0.1:8080/predict', {
                     method: 'POST',
                     body: formData
                 })
