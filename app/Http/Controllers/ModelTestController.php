@@ -57,29 +57,46 @@ class ModelTestController extends Controller
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,jfif|max:2048',
         ]);
-        
-        $class = $request->text1;
-        $prediction = $request->text2;
-        $probabilityPercentage = $request->text3;
-
+    
+        // Process the image and send it to the Flask API
         $imagePath = $request->file('image')->store('public/images');
         $relativeImagePath = str_replace('public/', '', $imagePath);
-
+        $imageUrl = storage_path('app/' . $imagePath);
+    
+        // Send the image to Flask API for prediction
+        $client = new \GuzzleHttp\Client();
+        $response = $client->post('http://127.0.0.1:8080/predict', [
+            'multipart' => [
+                [
+                    'name' => 'image',
+                    'contents' => fopen($imageUrl, 'r'),
+                    'filename' => basename($imageUrl),
+                ]
+            ]
+        ]);
+    
+        $result = json_decode($response->getBody()->getContents(), true);
+    
+        // Check if the response has the required data
+        if (isset($result['Prediction']) && isset($result['Probability'])) {
+            $prediction = $result['Prediction'];
+            $probabilityPercentage = $result['Probability'];
+        } else {
+            // Handle the case where prediction data is missing
+            return redirect()->back()->withErrors(['error' => 'Prediction data is missing from the API response.']);
+        }
+    
+        // Store prediction data in the database
         $image = new Image();
         $image->path = $relativeImagePath;
         $image->prediction = $prediction;
-        if ($prediction !== 'none') {
-            $image->probability = $probabilityPercentage;
-        } else if ($prediction === 'none') {
-            $image->probability = 'none';
-        }
+        $image->probability = $probabilityPercentage;
         $image->save();
-
+    
         return view('predict', [
             'prediction' => $prediction,
-            'class' => $class,
             'probabilityPercentage' => $probabilityPercentage,
-            'imagePath' => $imagePath
+            'imagePath' => $relativeImagePath
         ]);
-    }
+    }    
 }
