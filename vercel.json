@@ -10,8 +10,8 @@
             "dest": "public/img/" 
         },
         { 
-            "src": "/storage/app/public/images/(.*)",
-            "dest": "storage/images/" 
+            "src": "/storage/images/(.*)",
+            "dest": "public/storage/images/" 
         },
         { 
             "src": "/(.*)",
