@@ -3,7 +3,8 @@ Classify your movement with an easy-to-use platform to these class : Benchpress,
 <br><br>
 Framework :
 - Laravel
-- Flask API
+- Flask
+- Pytorch
 
 ## Skripsi
 Judul : KLASIFIKASI CITRA GERAKAN OLAHRAGA DALAM GYM MENGGUNAKAN GRAPH CONVOLUTIONAL NETWORK<br>
@@ -29,7 +30,6 @@ cp .env.example .env
 
 Update environment variables in .env
 ```dosini
-APP_NAME="Name Your Project"
 APP_URL=http://localhost
 
 DB_CONNECTION=mysql
@@ -37,15 +37,7 @@ DB_HOST=http://127.0.0.1
 DB_PORT=3306
 DB_DATABASE=name_you_want_db
 DB_USERNAME=root
-DB_PASSWORD=root
-
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
-
-REDIS_HOST=redis
-REDIS_PASSWORD=null
-REDIS_PORT=6379
+DB_PASSWORD=
 ```
 
 
