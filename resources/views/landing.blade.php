@@ -41,32 +41,38 @@
 
 <!-- JavaScript for Prediction -->
 <script>
-    document.getElementById('predictBtn').addEventListener('click', function() {
-        var input = document.getElementById('image');
-        var imageFile = input.files[0];
+    document.getElementById('predictBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    var input = document.getElementById('image');
+    var imageFile = input.files[0];
 
-        if (imageFile) {
-            var formData = new FormData();
-            formData.append('image', imageFile);
+    if (imageFile) {
+        var formData = new FormData();
+        formData.append('image', imageFile);
 
-            fetch('http://127.0.0.1:8080/predict', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
+        fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error); // Menampilkan pesan error dari Flask
+                } else {
                     var form = document.getElementById('form');
                     document.getElementById('text1').value = data.Class;
                     document.getElementById('text2').value = data.Prediction;
                     document.getElementById('text3').value = data.Probability;
                     form.submit();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        } else {
-            alert('Please upload an image.');
-        }
-    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat menghubungi server.');
+            });
+    } else {
+        alert('Silakan unggah gambar terlebih dahulu.');
+    }
+});
 </script>
 @endsection
