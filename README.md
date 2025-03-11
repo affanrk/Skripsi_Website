@@ -3,7 +3,8 @@ Classify your movement with an easy-to-use platform to these class : Benchpress,
 <br><br>
 Framework :
 - Laravel
-- Flask API
+- Flask
+- Pytorch
 
 ## Skripsi
 Judul : KLASIFIKASI CITRA GERAKAN OLAHRAGA DALAM GYM MENGGUNAKAN GRAPH CONVOLUTIONAL NETWORK<br>
